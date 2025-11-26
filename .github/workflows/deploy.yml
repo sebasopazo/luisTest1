@@ -3,10 +3,10 @@ name: Deploy Python App to VM on EC2 AWS
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
