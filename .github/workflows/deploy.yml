@@ -11,6 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: luisTest1
 
     steps:
       - name: Checkout code
@@ -33,7 +34,9 @@ jobs:
         run: flake8 .
 
       - name: Debug key
-        run: echo ${{secrets.SERVER_SSH_KEY}} | sed 's/./& /g'
+        run: |
+            echo "Key length:"
+            echo "${{ secrets.SERVER_SSH_KEY }}" | wc -c
 
       - name: Upload code to VM via SSH
         uses: appleboy/scp-action@v0.1.4
