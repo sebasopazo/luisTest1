@@ -32,6 +32,11 @@ jobs:
       - name: Lint with flake8
         run: flake8 .
 
+      - name: Debug key
+        run: |
+            echo "Key length:"
+            echo "${{ secrets.SERVER_SSH_KEY }}" | wc -c
+
       - name: Upload code to VM via SSH
         uses: appleboy/scp-action@v0.1.4
         with:
