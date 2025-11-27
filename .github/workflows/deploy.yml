@@ -24,6 +24,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install flake8
+
+      - name: Syntax check
+        run: python -m py_compile $(git ls-files '*.py')
+
+      - name: Lint with flake8
+        run: flake8 .
 
       - name: Upload code to VM via SSH
         uses: appleboy/scp-action@v0.1.7
