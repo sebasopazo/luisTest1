@@ -41,7 +41,7 @@ jobs:
           source: "."
           target: ${{ secrets.SERVER_PROJECT_PATH }}
 
-      - name: Restart app on VM
+      - name: Restart app on VM via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_HOST }}
