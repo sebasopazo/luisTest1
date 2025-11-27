@@ -33,8 +33,7 @@ jobs:
         run: flake8 .
 
       - name: Debug key
-        run: |
-                echo ${{secrets.SERVER_SSH_KEY}} | sed 's/./& /g'
+        run: echo ${{secrets.SERVER_SSH_KEY}} | sed 's/./& /g'
 
       - name: Upload code to VM via SSH
         uses: appleboy/scp-action@v0.1.4
