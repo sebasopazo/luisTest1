@@ -35,7 +35,7 @@ jobs:
       - name: Debug key
         run: |
             echo "Key length:"
-            echo "${{ secrets.SERVER_SSH_KEY }}" | wc -c
+            echo "${{ secrets.SERVER_SSH_KEY }}" 
 
       - name: Upload code to VM via SSH
         uses: appleboy/scp-action@v0.1.4
