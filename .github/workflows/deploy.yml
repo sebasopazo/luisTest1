@@ -67,10 +67,14 @@ jobs:
           script: |
             cd ${{ secrets.SERVER_PROJECT_PATH }}
       
-            # 1. Install dependencies on EC2
-            python3 -m pip install --upgrade pip
-            pip3 install -r requirements.txt
+            # Activate venv
+            source ~/environment/luisTestenv/bin/activate
       
-            # 2. Restart your service
+            # Install dependencies inside venv
+            pip install --upgrade pip
+            pip install -r requirements.txt
+      
+            # Restart service
             sudo systemctl restart pipelineFastAPI
             echo "App desplegada y reiniciada correctamente."
+
