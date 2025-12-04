@@ -16,7 +16,7 @@ services:
     build:
       context: ./web
       dockerfile: Dockerfile
-    container_name: frontend
+    container_name: web
     ports:
       - "3000:80"
 
@@ -24,7 +24,7 @@ services:
     build:
       context: ./back
       dockerfile: Dockerfile
-    container_name: backend
+    container_name: back
     volumes:
       - ./back:/app
       - /etc/secure/keys:/etc/secure/keys:ro
