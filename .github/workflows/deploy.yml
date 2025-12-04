@@ -1,4 +1,4 @@
-name: Deploy Python App to VM on EC2 AWS
+name: Deploy Full App to EC2
 
 on:
   push:
@@ -17,54 +17,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.13"
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install flake8
-
-      - name: Syntax check
-        run: git ls-files | grep '\.py$' | xargs python -m py_compile
-
-      - name: Lint with flake8
-        run: flake8 .
-
-      - name: Debug key
-        run: |
-            echo "Key length:"
-            echo "${{ secrets.SERVER_SSH_KEY }}" | wc -c
-
-      - name: Upload code to VM via SSH
+      - name: Upload project to EC2 via SSH
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "."
+          source: "."                 # ✅ ahora sube TODO el proyecto
           target: ${{ secrets.SERVER_PROJECT_PATH }}
 
-      - name: Restart app on VM via SSH
+      - name: Deploy using Docker Compose
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            # donde busca los archivos a leer o ejecutar? en la carpeta actual
             cd ${{ secrets.SERVER_PROJECT_PATH }}
-      
-            # Activate venv, elijo que venv usar
-            source ~/environment/luisTestenv/bin/activate
-      
-            # Install dependencies inside venv, 
-        
-            pip install -r requirements.txt
-      
-            # Restart service
-            sudo systemctl restart pipelineFastAPI
-            echo "App desplegada y reiniciada correctamente."
 
+            # Asegurarse de tener Docker y Docker Compose instalados
+            docker --version || sudo apt-get update && sudo apt-get install -y docker.io docker-compose
+
+            # Construir y levantar todos los contenedores
+            docker compose down
+            docker compose up --build -d
+
+            echo "Frontend + Backend + Proxy desplegados correctamente."
