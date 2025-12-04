@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f850672d-d32e-4b6a-900d-5dc7acded13c" name="Changes" comment="Commit 11: requeriments.txt fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sebasopazo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sebasopazo/luisTest1&quot;,
+    &quot;accountId&quot;: &quot;dd1e8343-2ceb-4e45-80c3-6ad5d4b3d0b6&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3626ZGGMaIzQ9ZdRbsQD6oV9yFF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/PycharmProjects/luisTest1/app&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sebas\PycharmProjects\luisTest1" />
+      <recent name="C:\Users\sebas\PycharmProjects\luisTest1\app" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f850672d-d32e-4b6a-900d-5dc7acded13c" name="Changes" comment="" />
+      <created>1764192372560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764192372560</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commit 1: hola mundo">
+      <option name="closed" value="true" />
+      <created>1764193062961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764193062961</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit 3: pipeline fix 1">
+      <option name="closed" value="true" />
+      <created>1764194502551</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764194502551</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit 3: pipeline fix 2">
+      <option name="closed" value="true" />
+      <created>1764195492748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764195492748</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit 3: added requirements.txt">
+      <option name="closed" value="true" />
+      <created>1764195776648</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764195776648</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit 4: added code validation">
+      <option name="closed" value="true" />
+      <created>1764203106235</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764203106235</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit 5: lessened flake strictness">
+      <option name="closed" value="true" />
+      <created>1764203235727</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764203235727</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit 6: test push">
+      <option name="closed" value="true" />
+      <created>1764278043709</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764278043709</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit 7: test push">
+      <option name="closed" value="true" />
+      <created>1764279812242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764279812242</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit 7: test push">
+      <option name="closed" value="true" />
+      <created>1764286536474</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764286536474</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit 8: debug">
+      <option name="closed" value="true" />
+      <created>1764286734595</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764286734595</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Commit 8: debug">
+      <option name="closed" value="true" />
+      <created>1764286855009</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1764286855009</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Commit 8: debug">
+      <option name="closed" value="true" />
+      <created>1764286969686</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764286969686</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit 8: debug">
+      <option name="closed" value="true" />
+      <created>1764287394372</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764287394372</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Commit 9: requeriments.txt auto install for ec2">
+      <option name="closed" value="true" />
+      <created>1764291364060</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764291364060</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Commit 9: requeriments.txt auto install for ec2">
+      <option name="closed" value="true" />
+      <created>1764292454723</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764292454723</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Commit 9: requeriments.txt auto install for ec2">
+      <option name="closed" value="true" />
+      <created>1764293272073</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764293272073</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Commit 11: requeriments.txt fix">
+      <option name="closed" value="true" />
+      <created>1764484229621</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764484229621</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Commit 11: requeriments.txt fix">
+      <option name="closed" value="true" />
+      <created>1764484425641</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764484425641</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit 1: hola mundo" />
+    <MESSAGE value="Commit 3: pipeline fix 1" />
+    <MESSAGE value="Commit 3: pipeline fix 2" />
+    <MESSAGE value="Commit 3: added requirements.txt" />
+    <MESSAGE value="Commit 4: added code validation" />
+    <MESSAGE value="Commit 5: lessened flake strictness" />
+    <MESSAGE value="Commit 6: test push" />
+    <MESSAGE value="Commit 7: test push" />
+    <MESSAGE value="Commit 8: debug" />
+    <MESSAGE value="Commit 9: requeriments.txt auto install for ec2" />
+    <MESSAGE value="Commit 11: requeriments.txt fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 11: requeriments.txt fix" />
+  </component>
+</project>
