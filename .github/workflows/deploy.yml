@@ -28,8 +28,7 @@ jobs:
           pip install flake8
 
       - name: Syntax check
-        run: |
-          git ls-files '*.py' | xargs python -m py_compile
+        run: git ls-files | grep '\.py$' | xargs python -m py_compile
 
       - name: Lint with flake8
         run: flake8 .
