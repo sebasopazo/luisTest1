@@ -25,8 +25,6 @@ services:
       context: ./back
       dockerfile: Dockerfile
     container_name: backend
-    expose:
-      - "8000"
     volumes:
       - ./back:/app
       - /etc/secure/keys:/etc/secure/keys:ro
