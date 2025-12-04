@@ -1,0 +1,70 @@
+name: Deploy Python App to VM on EC2 AWS
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: luisTest1
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install flake8
+
+      - name: Syntax check
+        run: python -m py_compile $(git ls-files '*.py')
+
+      - name: Lint with flake8
+        run: flake8 .
+
+      - name: Debug key
+        run: |
+            echo "Key length:"
+            echo "${{ secrets.SERVER_SSH_KEY }}" | wc -c
+
+      - name: Upload code to VM via SSH
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "."
+          target: ${{ secrets.SERVER_PROJECT_PATH }}
+
+      - name: Restart app on VM via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            # donde busca los archivos a leer o ejecutar? en la carpeta actual
+            cd ${{ secrets.SERVER_PROJECT_PATH }}
+      
+            # Activate venv, elijo que venv usar
+            source ~/environment/luisTestenv/bin/activate
+      
+            # Install dependencies inside venv, 
+        
+            pip install -r requirements.txt
+      
+            # Restart service
+            sudo systemctl restart pipelineFastAPI
+            echo "App desplegada y reiniciada correctamente."
+
