@@ -39,7 +39,7 @@ jobs:
             docker --version || sudo apt-get update && sudo apt-get install -y docker.io docker-compose
 
             # Construir y levantar todos los contenedores
-            docker compose down
-            docker compose up --build -d
+            docker-compose down
+            docker-compose up --build -d
 
             echo "Frontend + Backend + Proxy desplegados correctamente."
