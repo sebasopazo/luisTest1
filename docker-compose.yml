@@ -13,7 +13,9 @@ services:
       - back
 
   web:
-    build: ./web
+    build:
+      context: ./web
+      dockerfile: Dockerfile
     container_name: frontend
     ports:
       - "3000:80"
@@ -22,7 +24,10 @@ services:
       - HTTPS_PROXY=http://proxy:8080
 
   back:
-    build: ./back
-    container_name: backend
+    build:
+      context: ./back
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    volumes:
+      - ./back:/app
