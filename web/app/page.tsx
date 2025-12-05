@@ -10,8 +10,6 @@ export default function HomePage() {
 
 const API_URL = "https://tarea-luis-tls.click/api"; // Update to your domain or proxy
 
-const API_URL = "https://tarea-luis-tls.click/api";
-
 const getJWT = async () => {
   try {
     const resp = await fetch(`${API_URL}/getJWT`, {
