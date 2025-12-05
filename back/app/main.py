@@ -8,10 +8,11 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(root_path="/api")
 security = HTTPBearer()
 origins = [
-    "http://localhost:3000",   # si usas Next.js local
-    "http://localhost:5173",   # si usas Vite
-    "https://tarea-luis-tls.click",  # tu front futuro (si está en dominio)
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://tarea-luis-tls.click",
 ]
+
 
 app.add_middleware(
     CORSMiddleware,

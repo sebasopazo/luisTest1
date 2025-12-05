@@ -10,32 +10,14 @@ export default function HomePage() {
 
 const API_URL = "https://tarea-luis-tls.click/api"; // Update to your domain or proxy
 
-const getJWT = async () => {
-  setError(null);
-  setLoading(true); // Set loading state to true
-  try {
     const resp = await fetch(`${API_URL}/getJWT`, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-        'Origin': 'https://tarea-luis-tls.click', // Explicitly set Origin header
+        'Content-Type': 'application/json'
       },
-      credentials: 'include',  // Include credentials (cookies) if needed
+      credentials: 'include',
     });
 
-    if (!resp.ok) {
-      throw new Error('Failed to fetch JWT');
-    }
-
-    const data = await resp.json();
-    setToken(data.token);
-    localStorage.setItem("jwt", data.token);
-  } catch (err) {
-    setError("Error solicitando token");
-  } finally {
-    setLoading(false); // Set loading state to false after the fetch
-  }
-};
 
 
 
