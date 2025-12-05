@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./proxy/nginx.conf:/etc/nginx/nginx.conf
+      - ./proxy/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - web
       - back
