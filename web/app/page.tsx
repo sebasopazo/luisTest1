@@ -10,6 +10,10 @@ export default function HomePage() {
 
 const API_URL = "https://tarea-luis-tls.click/api"; // Update to your domain or proxy
 
+const API_URL = "https://tarea-luis-tls.click/api";
+
+const getJWT = async () => {
+  try {
     const resp = await fetch(`${API_URL}/getJWT`, {
       method: 'GET',
       headers: {
@@ -18,8 +22,18 @@ const API_URL = "https://tarea-luis-tls.click/api"; // Update to your domain or 
       credentials: 'include',
     });
 
+    if (!resp.ok) {
+      throw new Error('Failed to fetch JWT');
+    }
 
+    const data = await resp.json();
+    setToken(data.token);
+    localStorage.setItem("jwt", data.token);
 
+  } catch (err) {
+    setError("Error solicitando token");
+  }
+};
 
   const accessSecure = async () => {
     setError(null);
