@@ -10,7 +10,7 @@ security = HTTPBearer()
 origins = [
     "http://localhost:3000",   # si usas Next.js local
     "http://localhost:5173",   # si usas Vite
-    "https://tarea-luis-tls.click/",  # tu front futuro (si está en dominio)
+    "https://tarea-luis-tls.click",  # tu front futuro (si está en dominio)
 ]
 
 app.add_middleware(
