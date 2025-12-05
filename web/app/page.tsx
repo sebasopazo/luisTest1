@@ -6,11 +6,13 @@ export default function HomePage() {
   const [token, setToken] = useState<string | null>(null);
   const [secureMessage, setSecureMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false); // Loading state
 
-  const API_URL = "https://tarea-luis-tls.click/api"; // cambiar luego al dominio o proxy
+  const API_URL = "https://tarea-luis-tls.click/api"; // Update to your domain or proxy
 
   const getJWT = async () => {
     setError(null);
+    setLoading(true); // Set loading state to true
     try {
       const resp = await fetch(`${API_URL}/getJWT`);
       const data = await resp.json();
@@ -18,6 +20,8 @@ export default function HomePage() {
       localStorage.setItem("jwt", data.token);
     } catch (err) {
       setError("Error solicitando token");
+    } finally {
+      setLoading(false); // Set loading state to false after the fetch
     }
   };
 
@@ -30,6 +34,7 @@ export default function HomePage() {
       return;
     }
 
+    setLoading(true); // Set loading state to true
     try {
       const resp = await fetch(`${API_URL}/secure`, {
         headers: {
@@ -39,7 +44,12 @@ export default function HomePage() {
 
       if (!resp.ok) {
         const detail = await resp.json();
-        setError(`Error: ${detail.detail}`);
+        if (detail.detail && detail.detail.toLowerCase().includes('expired')) {
+          setError("El token ha expirado. Por favor, obtén un nuevo token.");
+          localStorage.removeItem("jwt"); // Remove expired token from localStorage
+        } else {
+          setError(`Error: ${detail.detail}`);
+        }
         return;
       }
 
@@ -47,6 +57,8 @@ export default function HomePage() {
       setSecureMessage(JSON.stringify(data, null, 2));
     } catch (err) {
       setError("Error al conectar con /secure");
+    } finally {
+      setLoading(false); // Set loading state to false after the fetch
     }
   };
 
@@ -65,8 +77,10 @@ export default function HomePage() {
             color: "white",
             borderRadius: "6px",
             marginRight: "10px"
-          }}>
-          Obtener Token
+          }}
+          disabled={loading} // Disable button when loading
+        >
+          {loading ? "Cargando..." : "Obtener Token"}
         </button>
 
         <button
@@ -76,8 +90,10 @@ export default function HomePage() {
             background: "green",
             color: "white",
             borderRadius: "6px"
-          }}>
-          Ingresar a /secure
+          }}
+          disabled={loading} // Disable button when loading
+        >
+          {loading ? "Cargando..." : "Ingresar a /secure"}
         </button>
       </div>
 
