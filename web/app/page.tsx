@@ -18,8 +18,9 @@ const getJWT = async () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Origin': 'https://tarea-luis-tls.click', // Add the Origin header explicitly
+        'Origin': 'https://tarea-luis-tls.click', // Explicitly set Origin header
       },
+      credentials: 'include',  // Include credentials (cookies) if needed
     });
 
     if (!resp.ok) {
@@ -35,6 +36,7 @@ const getJWT = async () => {
     setLoading(false); // Set loading state to false after the fetch
   }
 };
+
 
 
   const accessSecure = async () => {
